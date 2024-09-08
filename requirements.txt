@@ -1,4 +1,5 @@
 geopandas
+geopy
 gql[all]
 jupyter
 ladybug-comfort
