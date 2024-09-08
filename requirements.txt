@@ -1,3 +1,4 @@
+gql[all]
 jupyter
 matplotlib
 numpy
