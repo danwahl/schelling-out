@@ -1,5 +1,9 @@
+geopandas
 gql[all]
 jupyter
+ladybug-comfort
+ladybug-core
+ladybug-pandas
 matplotlib
 numpy
 pandas
