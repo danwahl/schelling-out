@@ -8,3 +8,5 @@ ladybug-pandas
 matplotlib
 numpy
 pandas
+plotly
+streamlit
