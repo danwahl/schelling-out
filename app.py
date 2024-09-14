@@ -5,6 +5,7 @@ import streamlit as st
 
 DEFAULT_WEIGHTS = {
     'biking': 1.0,
+    'climbing': 1.0,
     'housing': 1.0,
     'vegan': 1.0,
     'winter': 1.0,
@@ -32,7 +33,7 @@ weights['housing'] *= -1
 
 scores = weights*data.apply(lambda x: (x/chicago).apply(np.log2), axis=1)
 scores['lifestyle'] = scores[[
-    'biking', 'vegan', 'winter', 'summer']].mean(axis=1)
+    'biking', 'climbing', 'vegan', 'winter', 'summer']].mean(axis=1)
 scores['total'] = scores[weights.index].mean(axis=1)
 scores.sort_values('total', ascending=False, inplace=True)
 scores = scores.replace([np.inf, -np.inf], np.nan).dropna()
