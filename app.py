@@ -24,7 +24,7 @@ cities, data = load_data()
 chicago = data.loc[('Chicago', 'Illinois')]
 weights = pd.Series(DEFAULT_WEIGHTS)
 
-st.markdown('# Schelling Out 2024')
+st.markdown('# Schelling Out 2026')
 
 with st.expander('Weights'):
     for key in weights.index:
@@ -56,7 +56,7 @@ fig = px.scatter_geo(cities,
                      labels={'color': 'Score'},
                      scope='usa',
                      )
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 st.markdown('## Plot')
 
@@ -70,8 +70,8 @@ fig = px.scatter(scores,
                  color_continuous_midpoint=0,
                  labels={'x': 'Housing', 'y': 'Lifestyle'},
                  )
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 st.markdown('## Scores')
 
-st.dataframe(scores, use_container_width=True)
+st.dataframe(scores, width='stretch')
